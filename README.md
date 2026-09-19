@@ -36,7 +36,7 @@ If Accessibility cannot read the selected text directly, Lala Translate can use 
 ## Requirements
 
 - macOS 15 or later.
-- The planned prebuilt Beta release initially targets Apple Silicon. The source uses Swift, SwiftUI, and AppKit.
+- The current prebuilt Beta targets Apple Silicon (`arm64`). The source uses Swift, SwiftUI, and AppKit.
 - **Accessibility permission is required** to read text selected in other apps. After opening Lala Translate, grant it access in System Settings → Privacy & Security → Accessibility.
 
 ## Development build and installation
@@ -50,7 +50,7 @@ From the project directory:
 
 The build script creates `dist/Lala Translate.app` and applies ad-hoc signing for local development. Install that app in `/Applications` and launch the installed copy. If you rebuild it, macOS may require you to grant Accessibility permission again.
 
-The current Beta build has **not** been signed with Developer ID or notarized by Apple. Gatekeeper may require you to allow it manually in System Settings → Privacy & Security before opening it. This is a development/Beta distribution path, not a notarized public release.
+The current Beta build has **not** been signed with Developer ID or notarized by Apple. Gatekeeper may require you to allow it manually in System Settings → Privacy & Security before opening it. The current public Beta is distributed through GitHub Releases and is not Developer ID signed or notarized.
 
 The first translation for a language pair may ask you to download Apple's translation languages. See [known limitations](docs/KNOWN_LIMITATIONS.md) for current scope.
 
