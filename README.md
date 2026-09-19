@@ -12,6 +12,8 @@ macOS 15+ · Apple Silicon · Beta
 
 > **Beta:** The current prebuilt release is ad-hoc signed and not notarized by Apple. macOS may require manual approval in System Settings → Privacy & Security on first launch.
 
+![Lala Translate preview](docs/assets/lala-translate-preview.png)
+
 ## Quick Start
 
 1. Download the latest Beta release.
