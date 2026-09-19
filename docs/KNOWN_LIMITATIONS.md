@@ -5,4 +5,4 @@
 - The current development build uses ad-hoc signing, without Developer ID signing or Apple notarization. Gatekeeper may require manual approval in System Settings → Privacy & Security.
 - Rebuilding an ad-hoc signed app can change its code identity and require Accessibility permission to be granted again.
 - Translation does not start automatically when text is selected. Use Option + T or the menu bar action.
-- Language routing defaults to Chinese ↔ English use cases: Chinese goes to English, while English and other recognized languages go to Simplified Chinese. There is no free selection of arbitrary language pairs.
+- v0.1 is optimized for Chinese ↔ English translation. Latin-script text is treated as English, including short words and phrases; other non-Latin languages may still be detected by macOS Natural Language APIs and translated to Simplified Chinese when supported. There is no free selection of arbitrary language pairs.

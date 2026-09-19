@@ -3,7 +3,10 @@ import NaturalLanguage
 struct LanguagePreference {
     static func source(for text: String) -> String? {
         let trimmed = text.trimmingCharacters(in: .whitespacesAndNewlines)
-        if trimmed.range(of: #"^[A-Za-z]+(?:['’-][A-Za-z]+)*$"#, options: .regularExpression) != nil {
+        if trimmed.range(of: #"\p{Han}"#, options: .regularExpression) != nil {
+            return "zh-Hans"
+        }
+        if trimmed.range(of: #"^[A-Za-z\s'’.,!?:;()"“”-]+$"#, options: .regularExpression) != nil {
             return "en"
         }
         let recognizer = NLLanguageRecognizer()

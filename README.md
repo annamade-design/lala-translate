@@ -9,7 +9,7 @@ Select text → **Option + T** → Translate. Lala Translate runs in the menu ba
 - Global **Option + T** shortcut and a **Translate Selected Text** menu bar action.
 - Reads selected text from the active app with macOS Accessibility. If that fails during an explicit translation action, a Clipboard fallback briefly sends Command+C, reads the copied text, and attempts to preserve and restore the original pasteboard items and their types.
 - No background clipboard monitoring and no automatic translation on ordinary Command+C.
-- Chinese text translates to English; English text translates to Simplified Chinese. Other recognized languages default to Simplified Chinese. A single Latin alphabet word, including common apostrophes or hyphens, is treated as English.
+- v0.1 is optimized for Chinese ↔ English translation: Chinese text translates to English, and English text translates to Simplified Chinese. Latin-script text is treated as English for reliable short-word and short-phrase translation. Other non-Latin languages may still be detected by macOS Natural Language APIs and translated to Simplified Chinese when supported.
 - Speak, Copy, and Pin controls in the translation panel; Launch at Login is optional.
 - No account, API key, third-party translation API, or saved translation history.
 
