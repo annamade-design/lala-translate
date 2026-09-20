@@ -1,5 +1,7 @@
 # Lala Translate
 
+**English** | [简体中文](README.zh-CN.md)
+
 A lightweight native macOS translation utility powered by Apple's Translation framework.
 
 **Select text → Option + T → Translate.**
@@ -17,10 +19,12 @@ macOS 15+ · Apple Silicon · Beta
 ## Quick Start
 
 1. Download the latest Beta release.
-2. Unzip and move `Lala Translate.app` to `/Applications`.
-3. Open the app and grant Accessibility permission.
-4. Select text in any supported app.
-5. Press **Option + T**.
+2. Unzip `LalaTranslate-v0.1.0-beta-macOS-arm64.zip`.
+3. Move `Lala Translate.app` to `/Applications`.
+4. Open Lala Translate.
+5. Grant Accessibility permission in System Settings → Privacy & Security → Accessibility.
+6. Select text in another app.
+7. Press **Option + T**.
 
 If Accessibility cannot read the selected text directly, Lala Translate can use its clipboard fallback during an explicit translation action.
 
