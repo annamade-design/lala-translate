@@ -8,7 +8,7 @@ struct LalaTranslateApp: App {
 @MainActor
 final class AppDelegate: NSObject, NSApplicationDelegate {
     let translation = TranslationService()
-    let shortcut = ShortcutService()
+    let shortcut = ShortcutService.shared
     var panel: TranslationPanelController!
     var statusItem: NSStatusItem!
     var previousApplication: NSRunningApplication?
@@ -28,6 +28,9 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
         statusItem.button?.image = NSImage(systemSymbolName: "character.bubble", accessibilityDescription: "Lala Translate")
         statusItem.menu = MenuBarView.menu(target: self)
         shortcut.onTrigger = { [weak self] in self?.trigger() }
+        shortcut.onShortcutChange = { [weak self] configuration in
+            self?.statusItem.menu?.item(at: 0)?.title = "Translate Selected Text  \(configuration.displayName)"
+        }
         if !shortcut.register() { translation.message = "⌥T 已被其他应用占用，请释放快捷键后重新启动。"; panel.show() }
         if !AccessibilitySelectedTextProvider.isTrusted {
             requestAccessibilityPermissionOnce()
