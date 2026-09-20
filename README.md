@@ -44,7 +44,25 @@ If Accessibility cannot read the selected text directly, Lala Translate can use 
 - macOS 15 or later.
 - The current prebuilt Beta targets Apple Silicon (`arm64`). The source uses Swift, SwiftUI, and AppKit.
 - **Accessibility permission is required** to read text selected in other apps. After opening Lala Translate, grant it access in System Settings → Privacy & Security → Accessibility.
+- ### Accessibility permission after updating
 
+Because current Beta builds use ad-hoc signing, updating from an earlier Beta may require granting Accessibility permission again.
+
+If System Settings shows Lala Translate as enabled but the app still reports Accessibility as unauthorized:
+
+1. Quit Lala Translate completely.
+2. Open **System Settings → Privacy & Security → Accessibility**.
+3. Remove the existing **Lala Translate** entry from the list.
+4. Make sure the latest `Lala Translate.app` is installed in `/Applications`.
+5. Reopen Lala Translate and grant Accessibility permission again.
+6. Quit and relaunch the app once.
+
+If the issue persists, reset only Lala Translate's Accessibility authorization:
+
+```bash
+tccutil reset Accessibility io.github.annamade-design.LalaTranslate
+```
+Then reopen the app and grant Accessibility permission again.
 ## If macOS says Apple cannot verify Lala Translate
 
 The current Lala Translate Beta is distributed as a free test build and is not yet signed with an Apple Developer ID or notarized by Apple.
