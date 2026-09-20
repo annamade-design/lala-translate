@@ -8,7 +8,7 @@
 
 无需账号。无需 API Key。不使用第三方翻译服务。
 
-**[下载 v0.1.0 Beta](https://github.com/annamade-design/lala-translate/releases/tag/v0.1.0-beta)**
+**[下载 v0.1.1 Beta](https://github.com/annamade-design/lala-translate/releases/tag/v0.1.1-beta)**
 
 macOS 15+ · Apple Silicon · Beta
 
@@ -19,7 +19,7 @@ macOS 15+ · Apple Silicon · Beta
 ## 快速开始
 
 1. 下载最新的 Beta 版本。
-2. 解压 `LalaTranslate-v0.1.0-beta-macOS-arm64.zip`。
+2. 解压 `LalaTranslate-v0.1.1-beta-macOS-arm64.zip`。
 3. 将 `Lala Translate.app` 移动到「应用程序」文件夹 `/Applications`。
 4. 打开 Lala Translate。
 5. 前往「系统设置 → 隐私与安全性 → 辅助功能」，为 Lala Translate 开启辅助功能权限。
@@ -51,7 +51,11 @@ macOS 15+ · Apple Silicon · Beta
 
 ## 功能
 
-- **Option + T** 全局快捷键，以及菜单栏中的 **Translate Selected Text**。
+- 默认全局快捷键为 **Option + T**，现在可以在 Settings 中修改。
+- 自定义快捷键会自动保存，重新打开 App 后仍然有效。
+- 点击 **Reset** 可恢复默认 Option + T。
+- **Auto Translate on Selection** 暂未实现，目前显示为 **Coming later**。
+- 菜单栏仍提供 **Translate Selected Text** 操作。
 - 通过 macOS 辅助功能读取当前选中的文字；无法读取时，在用户主动翻译时使用 Clipboard fallback。
 - 不后台监听剪贴板，也不会在普通 Command+C 后自动翻译。
 - 中文 → 英文；英文 → 简体中文。v0.1 中 Latin-script text 按英文处理，以提高英文单词和短语的识别稳定性；其他非 Latin 语言在系统支持时可能通过 macOS Natural Language API 识别并翻译为简体中文。
