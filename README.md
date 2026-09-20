@@ -43,6 +43,23 @@ If Accessibility cannot read the selected text directly, Lala Translate can use 
 - The current prebuilt Beta targets Apple Silicon (`arm64`). The source uses Swift, SwiftUI, and AppKit.
 - **Accessibility permission is required** to read text selected in other apps. After opening Lala Translate, grant it access in System Settings → Privacy & Security → Accessibility.
 
+## If macOS says Apple cannot verify Lala Translate
+
+The current Lala Translate Beta is distributed as a free test build and is not yet signed with an Apple Developer ID or notarized by Apple.
+
+Because of this, macOS may show a warning on first launch saying that Apple cannot verify whether Lala Translate contains malware. This warning means that macOS cannot verify the developer signature and notarization status of this Beta. **It does not mean that macOS has detected malware in Lala Translate.**
+
+If you see this warning:
+
+1. Try opening Lala Translate once.
+2. Open **System Settings → Privacy & Security**.
+3. Scroll down to the security message for Lala Translate.
+4. Click **Open Anyway**.
+5. Confirm that you want to open the app.
+6. After launch, grant Lala Translate **Accessibility** permission when requested.
+
+You do not need to disable Gatekeeper or run any Terminal security-bypass commands.
+
 ## Development build and installation
 
 From the project directory:
@@ -53,8 +70,6 @@ From the project directory:
 ```
 
 The build script creates `dist/Lala Translate.app` and applies ad-hoc signing for local development. Install that app in `/Applications` and launch the installed copy. If you rebuild it, macOS may require you to grant Accessibility permission again.
-
-The current Beta build has **not** been signed with Developer ID or notarized by Apple. Gatekeeper may require you to allow it manually in System Settings → Privacy & Security before opening it. The current public Beta is distributed through GitHub Releases and is not Developer ID signed or notarized.
 
 The first translation for a language pair may ask you to download Apple's translation languages. See [known limitations](docs/KNOWN_LIMITATIONS.md) for current scope.
 

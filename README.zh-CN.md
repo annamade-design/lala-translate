@@ -28,18 +28,26 @@ macOS 15+ · Apple Silicon · Beta
 
 如果辅助功能无法直接读取当前选中的文字，Lala Translate 会在用户主动触发翻译时使用 Clipboard fallback 获取选区，并尽可能恢复原来的剪贴板内容。
 
-## 首次打开被 macOS 阻止怎么办
+## 首次打开时出现「Apple 无法验证」提示
 
-当前 Beta 使用 ad-hoc 签名，尚未经过 Apple Developer ID 签名和 notarization，因此 macOS 首次启动时可能阻止打开。
+当前 Lala Translate Beta 采用免费测试分发方式，尚未使用 Apple Developer ID 签名，也未经过 Apple notarization（公证）。
 
-处理方法：
+因此，macOS 在首次打开时可能提示：
+
+> Apple 无法验证“Lala Translate”是否包含可能危害 Mac 或泄露隐私的恶意软件。
+
+这是因为 macOS 无法验证当前 Beta 的开发者签名与公证状态，**并不表示系统已经检测到 Lala Translate 含有恶意软件**。
+
+如果出现该提示：
 
 1. 先尝试打开一次 Lala Translate。
 2. 打开「系统设置 → 隐私与安全性」。
-3. 找到关于 Lala Translate 的安全提示。
+3. 向下找到关于 Lala Translate 的安全提示。
 4. 点击「仍要打开 / Open Anyway」。
+5. 再次确认打开 App。
+6. 打开后，根据提示为 Lala Translate 开启「辅助功能」权限。
 
-不需要关闭 Gatekeeper，也不需要使用任何绕过安全机制的 Terminal 命令。
+无需关闭 Gatekeeper，也无需运行任何 Terminal 安全绕过命令。
 
 ## 功能
 
