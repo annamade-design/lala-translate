@@ -8,7 +8,7 @@ A lightweight native macOS translation utility powered by Apple's Translation fr
 
 No account. No API key. No third-party translation service.
 
-**[Download v0.1.0 Beta](https://github.com/annamade-design/lala-translate/releases/tag/v0.1.0-beta)**
+**[Download v0.1.1 Beta](https://github.com/annamade-design/lala-translate/releases/tag/v0.1.1-beta)**
 
 macOS 15+ · Apple Silicon · Beta
 
@@ -19,7 +19,7 @@ macOS 15+ · Apple Silicon · Beta
 ## Quick Start
 
 1. Download the latest Beta release.
-2. Unzip `LalaTranslate-v0.1.0-beta-macOS-arm64.zip`.
+2. Unzip `LalaTranslate-v0.1.1-beta-macOS-arm64.zip`.
 3. Move `Lala Translate.app` to `/Applications`.
 4. Open Lala Translate.
 5. Grant Accessibility permission in System Settings → Privacy & Security → Accessibility.
@@ -30,7 +30,9 @@ If Accessibility cannot read the selected text directly, Lala Translate can use 
 
 ## Features
 
-- Global **Option + T** shortcut and a **Translate Selected Text** menu bar action.
+- The default global shortcut is **Option + T**, and it can now be changed in Settings. Custom shortcuts persist across app relaunches, and Reset restores Option + T.
+- **Auto Translate on Selection** is not implemented yet and is shown as **Coming later**.
+- A **Translate Selected Text** menu bar action is also available.
 - Reads selected text from the active app with macOS Accessibility. If that fails during an explicit translation action, a Clipboard fallback briefly sends Command+C, reads the copied text, and attempts to preserve and restore the original pasteboard items and their types.
 - No background clipboard monitoring and no automatic translation on ordinary Command+C.
 - v0.1 is optimized for Chinese ↔ English translation: Chinese text translates to English, and English text translates to Simplified Chinese. Latin-script text is treated as English for reliable short-word and short-phrase translation. Other non-Latin languages may still be detected by macOS Natural Language APIs and translated to Simplified Chinese when supported.
