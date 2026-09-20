@@ -68,6 +68,26 @@ macOS 15+ · Apple Silicon · Beta
 - macOS 15 或更高版本。
 - 当前 Beta 预编译版本支持 Apple Silicon (`arm64`)。
 - 需要开启辅助功能权限。
+### 更新版本后辅助功能显示异常
+
+由于当前 Beta 使用 ad-hoc 签名，从较早版本的 Beta 更新后，macOS 可能需要重新授予辅助功能权限。
+
+如果「系统设置 → 隐私与安全性 → 辅助功能」中已经显示 Lala Translate 为开启状态，但 App 内仍显示「辅助功能未授权」，请按以下步骤处理：
+
+1. 完全退出 Lala Translate。
+2. 打开「系统设置 → 隐私与安全性 → 辅助功能」。
+3. 将列表中的 **Lala Translate** 整条删除，而不只是关闭开关。
+4. 确认最新版 `Lala Translate.app` 已放在 `/Applications`。
+5. 重新打开 Lala Translate，并再次授予辅助功能权限。
+6. 完全退出 App，然后重新打开一次。
+
+如果仍然无效，可以只重置 Lala Translate 的辅助功能授权：
+
+```bash
+tccutil reset Accessibility io.github.annamade-design.LalaTranslate
+```
+
+然后重新打开 Lala Translate，并再次授予辅助功能权限。
 
 ## 隐私
 
